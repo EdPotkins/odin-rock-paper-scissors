@@ -9,11 +9,26 @@ then game logs result to console.*/
 function getComputerChoice(){
     let selector = Math.floor(Math.random() * 3) + 1; //makes 1 or 2 or 3 randomly
     if (selector === 1){
-        return "Rock";
+        return "rock";
     } else if (selector === 2){
-        return "Paper";
+        return "paper";
     } else if (selector === 3){
-        return "Scissors";
+        return "scissors";
     } else return;
 }
 
+//Function that plays a single round of rock paper scissors
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "rock"){
+        return "It\'s a tie!";
+    } else if (playerSelection === "rock" && computerSelection === "paper"){
+        return "You lose! Paper beats Rock";
+    } else if (playerSelection === "rock" && computerSelection === "scissors"){
+        return "You win! Rock beats Scissors";
+    } else return;
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
