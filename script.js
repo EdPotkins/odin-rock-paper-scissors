@@ -14,15 +14,17 @@ buttons.forEach((button) => {
     button.addEventListener('click', function (e){
         playRound(e.target.id, getComputerChoice());
         
-        score.textContent = `Player\'s score: ${playerScore} vs 
-                             Computer\'s score: ${computerScore}`; //Score counter div
+        score.textContent = `Score:\n
+        ${playerScore} - Player vs Computer - ${computerScore}`; //Score counter div
         
         if (playerScore === 5){
             announcement.textContent = "YOU WIN!"; //Gameover conditions
             buttons.forEach((button) => {button.disabled = true});
+            container.textContent = "";
         } else if (computerScore === 5){
             announcement.textContent = "YOU LOSE!";
             buttons.forEach((button) => {button.disabled = true});
+            container.textContent = "";
         } return;
     });
 });

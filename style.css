@@ -1,0 +1,41 @@
+#rock {
+    background: no-repeat center/80% url("rock.svg") ;
+}
+
+#paper {
+    background: no-repeat center/80% url("paper.svg") ;
+}
+
+#scissors {
+    background: no-repeat center/80% url("scissors.svg") ;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    margin: 50px;
+}
+
+body {
+    width: fit-content;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    background-color: rgb(77, 77, 77);
+}
+
+.container, .score, .announcement {
+    text-align: center;
+}
+
+.score {
+    white-space: pre;
+    margin-top: 50px;
+}
+
+.announcement {
+    font-weight: bolder;
+    margin-top: 50px;
+
+}
